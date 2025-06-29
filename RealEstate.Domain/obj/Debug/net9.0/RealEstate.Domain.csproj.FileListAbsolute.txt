@@ -1,0 +1,4 @@
+C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.AssemblyInfoInputs.cache
+C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.AssemblyInfo.cs
+C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.csproj.CoreCompileInputs.cache
