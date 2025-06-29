@@ -3,7 +3,7 @@
 A .NET application for a real estate platform built using Clean Architecture principles.
 
 ## Prerequisites
-- .NET 6 SDK
+- .NET 9 SDK
 - SQL Server (LocalDB or full instance)
 
 ## Setup
