@@ -12,7 +12,9 @@ using Xunit;
 
 namespace RealEstate.Tests
 {
-    public class PropertiesControllerTests
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PropertiesControllerTests :Controller
     {
         [Fact]
         public async Task Search_ShouldReturnOkWithProperties()

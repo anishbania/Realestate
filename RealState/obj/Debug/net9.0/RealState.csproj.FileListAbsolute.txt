@@ -4,3 +4,10 @@ C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealState\obj\Debug\net9.0\R
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealState\obj\Debug\net9.0\RealState.AssemblyInfo.cs
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealState\obj\Debug\net9.0\RealState.csproj.CoreCompileInputs.cache
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealState\obj\Debug\net9.0\RealState.MvcApplicationPartsAssemblyInfo.cache
+C:\SuryaJyoti\Realestate\RealState\obj\Debug\net9.0\RealState.csproj.AssemblyReference.cache
+C:\SuryaJyoti\Realestate\RealState\obj\Debug\net9.0\RealState.GeneratedMSBuildEditorConfig.editorconfig
+C:\SuryaJyoti\Realestate\RealState\obj\Debug\net9.0\RealState.AssemblyInfoInputs.cache
+C:\SuryaJyoti\Realestate\RealState\obj\Debug\net9.0\RealState.AssemblyInfo.cs
+C:\SuryaJyoti\Realestate\RealState\obj\Debug\net9.0\RealState.csproj.CoreCompileInputs.cache
+C:\SuryaJyoti\Realestate\RealState\obj\Debug\net9.0\RealState.MvcApplicationPartsAssemblyInfo.cache
+C:\SuryaJyoti\Realestate\RealState\obj\Debug\net9.0\RealState.sourcelink.json

@@ -14,19 +14,14 @@ namespace RealState.Controllers
         {
             _listingService = listingService;
         }
-        /// <summary>
-        /// Searches properties based on provided filters.
-        /// </summary>
+        
         [HttpGet]
         public async Task<IActionResult> Search([FromQuery] string location, [FromQuery] decimal? minPrice, [FromQuery] decimal? maxPrice, [FromQuery] int? bedrooms)
         {
             var properties = await _listingService.SearchPropertiesAsync(location, minPrice, maxPrice, bedrooms);
             return Ok(properties);
         }
-
-        /// <summary>
-        /// Retrieves detailed information about a specific property.
-        /// </summary>
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetDetails(int id)
         {

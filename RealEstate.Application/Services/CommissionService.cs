@@ -1,19 +1,20 @@
-﻿using AutoMapper.Configuration;
-using RealEstate.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace RealEstate.Application.Services
 {
     public class CommissionService : ICommissionService
     {
+        private readonly RealEstateDbContext _ctx;
         private const decimal CommissionRate = 0.05m; // 5% commission rate
-        public decimal CalculateCommission(decimal propertyPrice)
+        public async Task<decimal> CalculateAsync(decimal price)
         {
-            return propertyPrice * CommissionRate;
+            var rate = await _ctx.CommissionRates
+                .OrderBy(r => r.MinPrice)
+                .FirstOrDefaultAsync(r => price >= r.MinPrice
+                    && (r.MaxPrice == null || price <= r.MaxPrice.Value));
+
+            if (rate == null) throw new InvalidOperationException("No commission rate configured.");
+
+            return Math.Round(price * rate.RatePercent / 100m, 2);
         }
     }
 }

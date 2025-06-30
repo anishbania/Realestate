@@ -8,6 +8,6 @@ namespace RealEstate.Domain.Interfaces
 {
     public interface ICommissionService
     {
-        decimal CalculateCommission(decimal propertyPrice);
+        Task<decimal> CalculateAsync(decimal price);
     }
 }

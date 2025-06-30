@@ -3,3 +3,9 @@ C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Infrastructure\ob
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.AssemblyInfo.cs
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.csproj.CoreCompileInputs.cache
+C:\SuryaJyoti\Realestate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.csproj.AssemblyReference.cache
+C:\SuryaJyoti\Realestate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\SuryaJyoti\Realestate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.AssemblyInfoInputs.cache
+C:\SuryaJyoti\Realestate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.AssemblyInfo.cs
+C:\SuryaJyoti\Realestate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.csproj.CoreCompileInputs.cache
+C:\SuryaJyoti\Realestate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.sourcelink.json

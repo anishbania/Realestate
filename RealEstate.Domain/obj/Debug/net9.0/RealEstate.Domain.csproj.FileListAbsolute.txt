@@ -2,3 +2,8 @@ C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Domain\obj\Debug\
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.AssemblyInfoInputs.cache
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.AssemblyInfo.cs
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.csproj.CoreCompileInputs.cache
+C:\SuryaJyoti\Realestate\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\SuryaJyoti\Realestate\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.AssemblyInfoInputs.cache
+C:\SuryaJyoti\Realestate\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.AssemblyInfo.cs
+C:\SuryaJyoti\Realestate\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.csproj.CoreCompileInputs.cache
+C:\SuryaJyoti\Realestate\RealEstate.Domain\obj\Debug\net9.0\RealEstate.Domain.sourcelink.json
