@@ -3,23 +3,71 @@ using RealEstate.Domain.Entities;
 using RealEstate.Domain.Interfaces;
 using Moq;
 using Xunit;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+using RealEstate.Application.Dtos;
+using System;
+using RealEstate.Infrastructure.Data;
 
 namespace RealEstate.Tests
 {
     public class ListingServiceTests
     {
-        [Fact]
-        public async Task SearchPropertiesAsync_ShouldReturnFilteredProperties()
+        private RealEstateDbContext GetContextWithListings()
         {
-            var mockRepo = new Mock<IProperty>();
-            var properties = new List<Property> { new Property { Id = 1, Description = "Test", Price = 100000 } };
-            mockRepo.Setup(repo => repo.SearchAsync("CityA", 100000, 200000, 3)).ReturnsAsync(properties);
-            var service = new ListingService(mockRepo.Object);
+            var opts = new DbContextOptionsBuilder<RealEstateDbContext>()
+                .UseInMemoryDatabase(Guid.NewGuid().ToString())
+                .Options;
 
-            var result = await service.SearchPropertiesAsync("CityA", 100000, 200000, 3);
+            var ctx = new RealEstateDbContext(opts);
+            ctx.Listings.AddRange(
+                new Listing { Id = Guid.NewGuid(), Location = "CityA", Price = 100, PropertyType = "Home", BrokerId = "B1", Commission = 2 },
+                new Listing { Id = Guid.NewGuid(), Location = "CityB", Price = 200, PropertyType = "Condo", BrokerId = "B2", Commission = 4 }
+            );
+            ctx.SaveChanges();
+            return ctx;
+        }
 
-            Assert.Single(result);
-            mockRepo.Verify(repo => repo.SearchAsync("CityA", 100000, 200000, 3), Times.Once());
+        [Fact]
+        public async Task GetAllAsync_FiltersByLocation()
+        {
+            // Arrange
+            using var ctx = GetContextWithListings();
+            var commMock = new Mock<ICommissionService>();
+            var cache = new MemoryCache(new MemoryCacheOptions());
+            var svc = new ListingService(ctx, commMock.Object, cache);
+
+            // Act
+            var result = await svc.GetAllAsync(location: "CityA");
+
+            // Assert
+            result.Should().HaveCount(1)
+                  .And.ContainSingle(x => x.Location == "CityA");
+        }
+
+        [Fact]
+        public async Task CreateAsync_ComputesCommissionAndSaves()
+        {
+            // Arrange
+            using var ctx = GetContextWithListings();
+            var commMock = new Mock<ICommissionService>();
+            commMock.Setup(x => x.CalculateAsync(150m)).ReturnsAsync(7.5m);
+            var cache = new MemoryCache(new MemoryCacheOptions());
+            var svc = new ListingService(ctx, commMock.Object, cache);
+
+            var dto = new CreateListingDto { Location = "CityC", Price = 150, PropertyType = "Loft" };
+            var brokerId = "BrokerX";
+
+            // Act
+            var created = await svc.CreateAsync(dto, brokerId);
+
+            // Assert
+            created.Location.Should().Be("CityC");
+            created.Commission.Should().Be(7.5m);
+
+            var inDb = ctx.Listings.Single(l => l.Id == created.Id);
+            inDb.BrokerId.Should().Be(brokerId);
+            inDb.Commission.Should().Be(7.5m);
         }
 
     }

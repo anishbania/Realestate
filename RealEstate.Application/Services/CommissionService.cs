@@ -1,4 +1,6 @@
-﻿
+﻿using Microsoft.EntityFrameworkCore;
+using RealEstate.Domain.Interfaces;
+using RealEstate.Infrastructure.Data;
 namespace RealEstate.Application.Services
 {
     public class CommissionService : ICommissionService

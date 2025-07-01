@@ -94,7 +94,6 @@ internal sealed class BearerSecuritySchemeTransformer(Microsoft.AspNetCore.Authe
         document.Info = new()
         {
             Title = "RealEstate",
-            Version = "v1",
             Description = "A simple example ASP.NET Core Web API",
         };
     }

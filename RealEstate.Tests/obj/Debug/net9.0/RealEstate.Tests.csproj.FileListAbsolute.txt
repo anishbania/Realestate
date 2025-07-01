@@ -3,9 +3,3 @@ C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Tests\obj\Debug\n
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.AssemblyInfoInputs.cache
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.AssemblyInfo.cs
 C:\Users\anish\OneDrive\Desktop\RealState\RealState\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.csproj.CoreCompileInputs.cache
-C:\SuryaJyoti\Realestate\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.csproj.AssemblyReference.cache
-C:\SuryaJyoti\Realestate\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\SuryaJyoti\Realestate\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.AssemblyInfoInputs.cache
-C:\SuryaJyoti\Realestate\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.AssemblyInfo.cs
-C:\SuryaJyoti\Realestate\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.csproj.CoreCompileInputs.cache
-C:\SuryaJyoti\Realestate\RealEstate.Tests\obj\Debug\net9.0\RealEstate.Tests.sourcelink.json

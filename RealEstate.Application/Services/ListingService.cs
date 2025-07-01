@@ -1,8 +1,9 @@
-﻿using AutoMapper;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using RealEstate.Application.Dtos;
 using RealEstate.Domain.Entities;
 using RealEstate.Domain.Interfaces;
+using RealEstate.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,13 +15,11 @@ namespace RealEstate.Application.Services
     public class ListingService : IListingService
     {
         private readonly RealEstateDbContext _ctx;
-        private readonly IProperty _property;
         private readonly ICommissionService _commSvc;
         private readonly IMemoryCache _cache;
         //private readonly IMapper _mapper;
         public ListingService(RealEstateDbContext ctx, ICommissionService commSvc, IMemoryCache cache)
         {
-            _property = property;
             //_mapper = mapper;
             _ctx = ctx;
             _commSvc = commSvc;

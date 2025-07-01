@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\SuryaJyoti\\Realestate\\RealEstate.Domain\\RealEstate.Domain.csproj": {
                 "projectPath": "C:\\SuryaJyoti\\Realestate\\RealEstate.Domain\\RealEstate.Domain.csproj"
+              },
+              "C:\\SuryaJyoti\\Realestate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj": {
+                "projectPath": "C:\\SuryaJyoti\\Realestate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj"
               }
             }
           }
@@ -53,12 +56,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[14.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -106,11 +103,7 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {
-              "C:\\SuryaJyoti\\Realestate\\RealEstate.Application\\RealEstate.Application.csproj": {
-                "projectPath": "C:\\SuryaJyoti\\Realestate\\RealEstate.Application\\RealEstate.Application.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

@@ -2,22 +2,6 @@
   "version": 3,
   "targets": {
     "net9.0": {
-      "AutoMapper/14.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Options": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/AutoMapper.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/AutoMapper.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.AspNetCore.Cryptography.Internal/9.0.6": {
         "type": "package",
         "compile": {
@@ -333,8 +317,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.6",
-          "RealEstate.Application": "1.0.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.6"
         },
         "compile": {
           "bin/placeholder/RealEstate.Domain.dll": {}
@@ -342,25 +325,25 @@
         "runtime": {
           "bin/placeholder/RealEstate.Domain.dll": {}
         }
+      },
+      "RealEstate.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.6",
+          "RealEstate.Application": "1.0.0",
+          "RealEstate.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RealEstate.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RealEstate.Infrastructure.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "AutoMapper/14.0.0": {
-      "sha512": "OC+1neAPM4oCCqQj3g2GJ2shziNNhOkxmNB9cVS8jtx4JbgmRzLcUOxB9Tsz6cVPHugdkHgCaCrTjjSI0Z5sCQ==",
-      "type": "package",
-      "path": "automapper/14.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "automapper.14.0.0.nupkg.sha512",
-        "automapper.nuspec",
-        "icon.png",
-        "lib/net8.0/AutoMapper.dll",
-        "lib/net8.0/AutoMapper.xml"
-      ]
-    },
     "Microsoft.AspNetCore.Cryptography.Internal/9.0.6": {
       "sha512": "AbRZPnAXFIvKKOWer6setdYy6/KY/hM9onf/LscD1O6sD8AJSyYemxmIa9T/kbfEPek2neEn9+lnPf7ClfglTQ==",
       "type": "package",
@@ -834,12 +817,17 @@
       "type": "project",
       "path": "../RealEstate.Domain/RealEstate.Domain.csproj",
       "msbuildProject": "../RealEstate.Domain/RealEstate.Domain.csproj"
+    },
+    "RealEstate.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../RealEstate.Infrastructure/RealEstate.Infrastructure.csproj",
+      "msbuildProject": "../RealEstate.Infrastructure/RealEstate.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "AutoMapper >= 14.0.0",
-      "RealEstate.Domain >= 1.0.0"
+      "RealEstate.Domain >= 1.0.0",
+      "RealEstate.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -876,6 +864,9 @@
           "projectReferences": {
             "C:\\SuryaJyoti\\Realestate\\RealEstate.Domain\\RealEstate.Domain.csproj": {
               "projectPath": "C:\\SuryaJyoti\\Realestate\\RealEstate.Domain\\RealEstate.Domain.csproj"
+            },
+            "C:\\SuryaJyoti\\Realestate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj": {
+              "projectPath": "C:\\SuryaJyoti\\Realestate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj"
             }
           }
         }
@@ -895,12 +886,6 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
-        "dependencies": {
-          "AutoMapper": {
-            "target": "Package",
-            "version": "[14.0.0, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
@@ -925,7 +910,7 @@
     {
       "code": "NU1108",
       "level": "Error",
-      "message": "Cycle detected. \r\n  RealEstate.Application -> RealEstate.Domain -> RealEstate.Application.",
+      "message": "Cycle detected. \r\n  RealEstate.Application -> RealEstate.Infrastructure -> RealEstate.Application.",
       "libraryId": "RealEstate.Application",
       "targetGraphs": [
         "net9.0"

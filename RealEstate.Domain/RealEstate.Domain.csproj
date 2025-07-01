@@ -8,11 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.6" />
-
   </ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\RealEstate.Application\RealEstate.Application.csproj" />
-	</ItemGroup>
 
 </Project>

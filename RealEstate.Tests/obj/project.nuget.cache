@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "fbJ0M27T8gU=",
+  "dgSpecHash": "ms2epybLMk8=",
   "success": false,
   "projectFilePath": "C:\\SuryaJyoti\\Realestate\\RealEstate.Tests\\RealEstate.Tests.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\anish.baniya\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\anish.baniya\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\anish.baniya\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\anish.baniya\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
@@ -84,7 +83,7 @@
     {
       "code": "NU1108",
       "level": "Error",
-      "message": "Cycle detected. \r\n  RealEstate.Tests -> RealState -> RealEstate.Domain -> RealEstate.Application.",
+      "message": "Cycle detected. \r\n  RealEstate.Tests -> RealState -> RealEstate.Infrastructure -> RealEstate.Application.",
       "libraryId": "RealEstate.Application",
       "targetGraphs": [
         "net9.0"
